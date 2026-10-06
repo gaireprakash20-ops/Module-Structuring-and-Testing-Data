@@ -29,3 +29,15 @@ test("can correctly convert one minute before noon", function () {
 test("can correctly convert one hour after noon", function () {
   assert.equal(formatAs12HourClock("13:00"), "01:00 pm");
 });
+
+test("can correctly convert midnight", function () {
+  assert.equal(formatAs12HourClock("00:00"), "12:00 am");
+});
+
+test("can correctly convert Noon", function () {
+  assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
+});
+
+test("can correctly convert last minutes of the day", function () {
+  assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
+});
