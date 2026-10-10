@@ -15,9 +15,10 @@
 
 export function isProperFraction(numerator, denominator) {
   if (numerator === denominator) {
-    return `false`;
+    return false;
   } else if (numerator > denominator) {
-    return `true`;
+    return false;
   } else denominator > numerator;
-  return `false`;
+  return true;
 }
+console.log(isProperFraction(1, 2));
