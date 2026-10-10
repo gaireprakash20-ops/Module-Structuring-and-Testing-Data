@@ -14,7 +14,10 @@
 // execute the code to ensure all tests pass.
 
 export function isProperFraction(numerator, denominator) {
-  if (numerator < 1 && 2 > denominator) {
-    return `numerator`;
-  }
+  if (numerator === denominator) {
+    return `false`;
+  } else if (numerator > denominator) {
+    return `true`;
+  } else denominator > numerator;
+  return `false`;
 }
