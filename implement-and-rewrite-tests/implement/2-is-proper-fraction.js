@@ -14,11 +14,21 @@
 // execute the code to ensure all tests pass.
 
 export function isProperFraction(numerator, denominator) {
-  if (numerator === denominator) {
+  if (denominator === 0) {
     return false;
-  } else if (numerator > denominator) {
+  }
+
+  if (numerator < 0) {
+    numerator = -numerator;
+  }
+
+  if (denominator < 0) {
+    denominator = -denominator;
+  }
+
+  if (numerator < denominator) {
+    return true;
+  } else {
     return false;
-  } else denominator > numerator;
-  return true;
+  }
 }
-console.log(isProperFraction(1, 2));
