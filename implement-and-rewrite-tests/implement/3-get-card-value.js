@@ -24,17 +24,19 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  if (card === "A") {
+  const value = card.slice(0, 1);
+  if (value === "A") {
     return 11;
-  } else if (card === "J") {
+  } else if (value === "J") {
     return 10;
-  } else if (card === "Q") {
+  } else if (value === "Q") {
     return 10;
-  } else if (card === "K") {
+  } else if (value === "K") {
     return 10;
-  } else if (Number(card) >= 2 && Number(card) <= 10) {
-    return Number(card);
+  } else if (Number(value) >= "2" && Number(value) <= "10") {
+    return Number(value);
   } else {
     return NaN;
   }
 }
+// console.log(getCardValue("2♠"));
