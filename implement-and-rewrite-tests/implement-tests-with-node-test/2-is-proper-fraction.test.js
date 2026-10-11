@@ -1,4 +1,5 @@
 import assert from "node:assert";
+
 import test from "node:test";
 
 import { isProperFraction } from "../implement/2-is-proper-fraction.js";
