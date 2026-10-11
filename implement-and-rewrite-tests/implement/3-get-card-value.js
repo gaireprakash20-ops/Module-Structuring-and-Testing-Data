@@ -24,5 +24,22 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  if (card === "A") {
+    return 11;
+  } else if (card === "J") {
+    return 10;
+  } else if (card === "Q") {
+    return 10;
+  } else if (card === "K") {
+    return 10;
+  } else if (Number(card) >= 2 && Number(card) <= 10) {
+    return Number(card);
+  } else {
+    return NaN;
+  }
 }
+
+console.log(getCardValue("A"));
+console.log(getCardValue("K"));
+console.log(getCardValue(3));
+console.log(getCardValue(12));
