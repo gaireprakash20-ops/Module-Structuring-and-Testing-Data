@@ -38,8 +38,3 @@ export function getCardValue(card) {
     return NaN;
   }
 }
-
-console.log(getCardValue("A"));
-console.log(getCardValue("K"));
-console.log(getCardValue(3));
-console.log(getCardValue(12));
