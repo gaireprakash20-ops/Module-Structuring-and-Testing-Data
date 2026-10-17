@@ -39,11 +39,7 @@ export function getCardValue(card) {
 
   if (value === "A") {
     return 11;
-  } else if (value === "J") {
-    return 10;
-  } else if (value === "Q") {
-    return 10;
-  } else if (value === "K") {
+  } else if (value === "J" || value === "Q" || value === "K") {
     return 10;
   } else if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(value)) {
     return Number(value);
@@ -51,4 +47,4 @@ export function getCardValue(card) {
     throw new Error(errorMessage);
   }
 }
-console.log(getCardValue("10♠"));
+console.log(getCardValue("K♠"));
