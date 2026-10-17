@@ -18,17 +18,6 @@ export function isProperFraction(numerator, denominator) {
     return false;
   }
 
-  if (numerator < 0) {
-    numerator = -numerator;
-  }
-
-  if (denominator < 0) {
-    denominator = -denominator;
-  }
-
-  if (numerator < denominator) {
-    return true;
-  } else {
-    return false;
-  }
+  return Math.abs(numerator) < Math.abs(denominator);
 }
+console.log(isProperFraction(1, 3));
